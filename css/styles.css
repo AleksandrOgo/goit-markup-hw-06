@@ -668,8 +668,9 @@ background-color: var(--color-blue-light);
     display: block;
     text-align: center;
     display: flex;
-    color: var(--color-one);
+    color: var(--color-dark);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .inside-form {
     width: 100%;
@@ -682,7 +683,7 @@ background-color: var(--color-blue-light);
     outline: none;
     border-radius: 4px;
 }
-.model-check {
+.modal-check {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
@@ -691,8 +692,8 @@ background-color: var(--color-blue-light);
 }
 .form-check:checked+.checked {
     background: var(--color-lightblue);
-    border: 1px solid var(--color-lightblue);
-    background-image: url(../images/clic.svg);
+    border: 1px solid var(--color-dark);
+    background-image: url(../images/icon-click.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -710,17 +711,16 @@ background-color: var(--color-blue-light);
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
     appearance: none;
 }
-button-oneform {
-    display: block;
+.button-oneform {
+    display: flex;
     text-align: center;
     justify-content: center;
     width: 169px;
     height: 56px;
-    background-color: var(--color-variable);
-    color: var(--color-inverted);
+    background: var(--color-blue);
+    color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border: var(--color-variable);
     font-family: inherit;
     text-align: center;
     cursor: pointer;
@@ -730,11 +730,11 @@ button-oneform {
 }
 
 .button-oneform:focus {
-    background-color: var(--color-variable);
+    background-color: var(--color-blue-light);
 }
 
 .button-oneform:hover {
-    background-color: var(--color-lightblue);
+    background-color: var(--color-blue-light);
 }
 /* Modal */
 .backdrop {
@@ -758,6 +758,14 @@ pointer-events: none;
 .backdrop.is-hidden.modal {
 transform: scale(0);
 }
+.text-form {
+    text-align: center;
+    width: 360px;
+    height: 24px;
+    margin-top: 72px;
+    margin-left: 24px;
+    color: #2E2F42;
+}
 .modal {
     position: relative;
     overflow: auto;
@@ -767,7 +775,6 @@ transform: scale(0);
     max-height: 576px;
     background-color: #FCFCFC;
     transform: scale(1);
-    tp
 }
 .modal-close {
     position: absolute;
@@ -799,4 +806,19 @@ transform: scale(0);
 }
 .close-icon:hover, .close-icon:focus {
     fill: #FFFFFF;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 34px;
+}
+.user-type {
+    display: block;
+    margin-bottom: 8px;
+}
+.input-form {
+    position: relative;
+    outline: none;
 }
