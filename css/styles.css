@@ -594,6 +594,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 1.5;
+margin-bottom: 16px;
 }
 .footer-form-subscribe {
     display: flex;
@@ -617,7 +618,6 @@ color: #FFFFFF;
 }
 .user-insert {
 display: block;
-margin-bottom: 8px;
 }
 .button-subscribe {
 display: flex;
@@ -644,21 +644,16 @@ background-color: var(--color-blue-light);
     fill: #FFFFFF;
 }
 .form-name {
+    font-family: 'Roboto';
     display: block;
     font-size: 12px;
-    line-height: var(--line-height1);
     margin-bottom: 4px;
-    color: var(--color-gray);
-}
-.modal-userform {
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding-left: 38px;
-    color: var(--color-one);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
 }
 .user-form {
     position: absolute;
@@ -670,8 +665,39 @@ background-color: var(--color-blue-light);
     display: flex;
     color: var(--color-dark);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
+.user-form:hover {
+    fill: var(--color-blue);
+}
+.modal-userform {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 38px;
+    color: var(--color-dark);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.modal-userform:hover {
+border: 1px solid #4D5AE5;
+border-radius: 4px;
+fill: var(--color-blue);
+}
+.modal-userform:focus {
+    border: 1px solid #4D5AE5;
+    border-radius: 4px;
+    fill: var(--color-blue);
+}
+.modal-userform:hover+.user-form {
+    fill: var(--color-blue-light);
+}
+.modal-userform:focus+.user-form {
+    fill: var(--color-blue-light);
+}
+
+
 .inside-form {
     width: 100%;
     height: 120px;
@@ -679,9 +705,23 @@ background-color: var(--color-blue-light);
     padding: 8px 16px;
     color: rgba(46, 47, 66, 0.4);
     border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
-    border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+}
+.inside-form:hover {
+    border: 1px solid #4D5AE5;
+
+}
+.inside-form:focus {
+    border: 1px solid #4D5AE5;
+
 }
 .modal-check {
     display: flex;
@@ -689,15 +729,15 @@ background-color: var(--color-blue-light);
     margin-bottom: 24px;
     font-size: 12px;
     gap: 8px;
+    color: #8E8F99;
 }
 .form-check:checked+.checked {
-    background: var(--color-lightblue);
+    background: var(--color-blue);
     border: 1px solid var(--color-dark);
-    background-image: url(../images/icon-click.svg);
+    background-image: url(../images/click.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .form-check {
     appearance: none;
 }
@@ -705,11 +745,23 @@ background-color: var(--color-blue-light);
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 1px solid var(--color-one);
+    border: 1px solid var(--color-dark);
     border-radius: 2px;
     cursor: pointer;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
     appearance: none;
+}
+.accept {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 .button-oneform {
     display: flex;
@@ -759,22 +811,28 @@ pointer-events: none;
 transform: scale(0);
 }
 .text-form {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
     text-align: center;
+    align-items: center;
     width: 360px;
     height: 24px;
-    margin-top: 72px;
-    margin-left: 24px;
     color: #2E2F42;
+    padding-left: 24px;
+    margin-bottom: 34px;
 }
 .modal {
     position: relative;
     overflow: auto;
     width: 100%;
-    height: 100%;
     max-width: 408px;
-    max-height: 576px;
     background-color: #FCFCFC;
     transform: scale(1);
+    padding-top: 72px;
+    padding-bottom: 24px;
+
 }
 .modal-close {
     position: absolute;
@@ -817,6 +875,9 @@ transform: scale(0);
 .user-type {
     display: block;
     margin-bottom: 8px;
+}
+.user-comment {
+mardin-top: 16px;
 }
 .input-form {
     position: relative;
