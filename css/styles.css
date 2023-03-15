@@ -820,8 +820,7 @@ transform: scale(0);
     width: 360px;
     height: 24px;
     color: #2E2F42;
-    padding-left: 24px;
-    margin-bottom: 34px;
+    margin-bottom: 16px;
 }
 .modal {
     position: relative;
@@ -870,9 +869,7 @@ transform: scale(0);
 .contact-form {
     display: flex;
     flex-direction: column;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-top: 34px;
+    margin-top: 16px;
 }
 .user-type {
     display: block;
